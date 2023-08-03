@@ -161,8 +161,13 @@ def get_flight_details():
     departure_time = "6:00am"
     arrival_time = "4:00pm"
     date = "Wed, Aug 9, 2023"
+    basic_cabin_remaining_seats = "0"
+    basic_cabin_class_price = "Sold Out"
+    main_cabin_class_remaining_seats = "4"
     main_cabin_class_price = "$634"
+    comfort_cabin_class_remaining_seats = "1"
     comfort_cabin_class_price = "$874"
+    first_cabin_class_remaining_seats = "1"
     first_cabin_class_price = "$1,842"
 
     # Create the dictionary with the flight details
@@ -172,20 +177,21 @@ def get_flight_details():
         "departure_time": departure_time,
         "arrival_time": arrival_time,
         "date": date,
+        "basic_cabin_class": {
+            "remaining_seats": basic_cabin_remaining_seats,
+            "price": basic_cabin_class_price,
+        },
         "main_cabin_class": {
+            "remaining_seats": main_cabin_class_remaining_seats,
             "price": main_cabin_class_price,
-            "type": "Round Trip",
-            "action": "Select this Flight"
         },
         "comfort_cabin_class": {
+            "remaining_seats": comfort_cabin_class_remaining_seats,
             "price": comfort_cabin_class_price,
-            "type": "Round Trip",
-            "action": "Select this Flight"
         },
         "first_cabin_class": {
+            "remaining_seats": first_cabin_class_remaining_seats,
             "price": first_cabin_class_price,
-            "type": "Round Trip",
-            "action": "Select this Flight"
         }
     }
 
